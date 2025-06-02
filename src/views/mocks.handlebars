@@ -1,0 +1,28 @@
+<h1>Usuarios Mockeados</h1>
+
+<ul>
+{{#each users}}
+    <li>{{this.first_name}} {{this.last_name}} - {{this.email}} - Rol: {{this.role}}</li>
+{{/each}}
+</ul>
+
+<table border="1">
+<thead>
+    <tr>
+    <th>Email</th>
+    <th>Rol</th>
+    </tr>
+</thead>
+<tbody>
+    {{#each users}}
+    <tr>
+        <td>{{this.email}}</td>
+        <td>{{this.role}}</td>
+    </tr>
+    {{/each}}
+</tbody>
+</table>
+
+<form action="/api/mocks/mockingusers" method="GET">
+<button type="submit">Generar Nuevos Usuarios</button>
+</form>
