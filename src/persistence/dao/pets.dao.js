@@ -1,4 +1,4 @@
-import PetModel from '../models/pets.model.js';
+import PetModel from "../models/pets.model.js";
 
 export class PetsDao {
 async getAll() {
@@ -7,5 +7,9 @@ async getAll() {
 
 async create(petData) {
     return await PetModel.create(petData);
+}
+
+async getById(id) {
+    return await PetModel.findById(id).lean();
 }
 }

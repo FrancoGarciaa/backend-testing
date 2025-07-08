@@ -1,7 +1,7 @@
-import winston from 'winston';
+import winston from "winston";
 
 const customLogger = winston.createLogger({
-level: 'info',
+level: "info",
 transports: [
     new winston.transports.Console({
     format: winston.format.combine(
@@ -10,8 +10,8 @@ transports: [
     )
     }),
     new winston.transports.File({
-    filename: 'logs/errors.log',
-    level: 'error',
+    filename: "logs/errors.log",
+    level: "error",
     format: winston.format.json()
     })
 ]

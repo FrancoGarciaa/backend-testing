@@ -16,5 +16,6 @@ COPY . .
 # Puerto en el que escucha tu app (ajustá si es otro)
 EXPOSE 3131
 
+
 # Comando de inicio
-CMD ["npm", "start"]
+CMD ["node", "server.js"]

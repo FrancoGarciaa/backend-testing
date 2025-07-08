@@ -12,11 +12,11 @@ export const generateMockUser = () => ({
 
 
 export const generateMockPet = (owners = []) => ({
-    name: faker.animal.name(),
+    name: faker.animal.petName(),
     species: faker.animal.type(),
     age: faker.number.int({ min: 1, max: 15 }),
     adopted: faker.datatype.boolean(),
-    owner: owners.length && faker.datatype.boolean()
+    owner: (owners.length && faker.datatype.boolean())
     ? faker.helpers.arrayElement(owners)
     : null,
 });

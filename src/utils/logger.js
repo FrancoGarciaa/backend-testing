@@ -1,4 +1,4 @@
-import winston from 'winston';
+import winston from "winston";
 
 const customLevels = {
 levels: {
@@ -10,12 +10,12 @@ levels: {
     http: 5,
 },
 colors: {
-    fatal: 'red',
-    error: 'magenta',
-    warn: 'yellow',
-    info: 'blue',
-    debug: 'green',
-    http: 'cyan',
+    fatal: "red",
+    error: "magenta",
+    warn: "yellow",
+    info: "blue",
+    debug: "green",
+    http: "cyan",
 },
 };
 
@@ -25,7 +25,7 @@ export const logger = winston.createLogger({
 levels: customLevels.levels,
 transports: [
     new winston.transports.Console({
-    level: 'debug',
+    level: "debug",
     format: winston.format.combine(
         winston.format.colorize({ all: true }),
         winston.format.simple()

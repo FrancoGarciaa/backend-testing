@@ -1,6 +1,6 @@
-import { userRepository } from '../repository/users.repository.js';
-import { petRepository } from '../repository/pets.repository.js';
-import { generateMultipleUsers, generateMultiplePets, } from '../mocks/mocking.js'; 
+import { userRepository } from "../repository/users.repository.js";
+import { petRepository } from "../repository/pets.repository.js";
+import { generateMultipleUsers, generateMultiplePets, } from "../mocks/mocking.js"; 
 
 export class MocksService {
 async generateMockUsers(count = 50) {
