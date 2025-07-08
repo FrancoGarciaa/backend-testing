@@ -1,14 +1,18 @@
 import request from "supertest";
-import app from "../app.js";
+import app from "../app.test.js";
 import mongoose from "mongoose";
 import assert from "assert";
-import { describe, it } from "mocha";
+
+before(async () => {
+    await mongoose.connect("mongodb://localhost:27017/testdb");
+});
+
+after(async () => {
+    await mongoose.connection.dropDatabase();
+    await mongoose.disconnect();
+});
 
 describe("GET /api/users", () => {
-
-    after(async () => {
-        await mongoose.connection.close();
-    });
 
     it("debería responder con una lista de usuarios", async () => {
         const response = await request(app).get("/api/users");

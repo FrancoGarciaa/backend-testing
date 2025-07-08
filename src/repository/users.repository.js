@@ -13,7 +13,8 @@ async create(userData) {
 }
 
 async getById(id) {
-    return await usersDao.getById(id);
+    const user = await usersDao.getById(id);
+    return new UserDTO(user);
 }
 
 }

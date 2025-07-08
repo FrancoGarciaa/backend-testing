@@ -1,5 +1,5 @@
 import request from "supertest";
-import app from "../app.simple.js";
+import app from "../app.test.js";
 import assert from "assert";
 import { describe, it, before } from "mocha";
 import mongoose from "mongoose";
